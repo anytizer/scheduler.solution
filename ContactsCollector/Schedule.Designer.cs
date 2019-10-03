@@ -35,7 +35,7 @@ namespace ContactsCollector
             // 
             this.contactMeControl1.Location = new System.Drawing.Point(0, 1);
             this.contactMeControl1.Name = "contactMeControl1";
-            this.contactMeControl1.Size = new System.Drawing.Size(418, 182);
+            this.contactMeControl1.Size = new System.Drawing.Size(418, 207);
             this.contactMeControl1.TabIndex = 0;
             this.contactMeControl1.Load += new System.EventHandler(this.ContactMeControl1_Load);
             // 
@@ -43,7 +43,7 @@ namespace ContactsCollector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(423, 180);
+            this.ClientSize = new System.Drawing.Size(423, 214);
             this.Controls.Add(this.contactMeControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);

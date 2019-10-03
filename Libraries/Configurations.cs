@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ContactsCollector
+namespace Libraries
 {
-    class Configurations
+    public class Configurations
     {
-        private Encoder encoder = new Encoder();
+        private EncoderDecoder encoder = new EncoderDecoder();
 
         // SELECT TO_BASE64("http://help.example.com/");
         private string _helpURL = "aHR0cDovL2hlbHAuZXhhbXBsZS5jb20v";
@@ -61,5 +61,16 @@ namespace ContactsCollector
             set { }
         }
 
+        // SELECT TO_BASE64("/appointments/appointments/list");
+        private string _listAppointments = "L2FwcG9pbnRtZW50cy9hcHBvaW50bWVudHMvbGlzdA==";
+        public string LISTAPPOINTMENTS {
+            get
+            {
+                return encoder.decode(_listAppointments);
+            }
+            set
+            {
+            }
+        }
     }
 }

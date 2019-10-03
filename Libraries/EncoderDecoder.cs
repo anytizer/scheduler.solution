@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ContactsCollector
+namespace Libraries
 {
-    class Encoder
+    public class EncoderDecoder
     {
         // https://stackoverflow.com/questions/11743160/how-do-i-encode-and-decode-a-base64-string
         public string encode(string raw)

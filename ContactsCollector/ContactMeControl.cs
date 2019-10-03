@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using RestSharp;
 using Newtonsoft.Json;
+using Libraries;
+using EncoderDecoder = Libraries.EncoderDecoder;
 
 namespace ContactsCollector
 {
@@ -38,7 +40,7 @@ namespace ContactsCollector
 
             // send contact info to the API
 
-            Encoder encoder = new Encoder();
+            EncoderDecoder encoder = new EncoderDecoder();
             
             string booking_endpoint_resource = config.BOOKAPPOINTMENT;
 
