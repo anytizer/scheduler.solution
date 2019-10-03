@@ -29,19 +29,18 @@ namespace ContactsCollector
         private void ContactMeControl_Load(object sender, EventArgs e)
         {
             dateTimePicker1.MinDate = DateTime.Now;
+            dateTimePicker1.MaxDate = DateTime.Now.AddDays(21);
         }
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            Encoder encoder = new Encoder();
-            Endpoints endpoints = new Endpoints();
-
-
             // https://stackoverflow.com/questions/6312970/restsharp-json-parameter-posting
 
             // send contact info to the API
+
+            Encoder encoder = new Encoder();
             
-            string booking_endpoint_resource = encoder.decode(endpoints.bookAppointment);
+            string booking_endpoint_resource = config.BOOKAPPOINTMENT;
 
             RestClient client = new RestClient(config.APIGATEWAY);
             RestRequest request = new RestRequest(booking_endpoint_resource, Method.POST);

@@ -39,17 +39,18 @@ namespace ContactsCollector
             this.contactMeControl1.TabIndex = 0;
             this.contactMeControl1.Load += new System.EventHandler(this.ContactMeControl1_Load);
             // 
-            // Form1
+            // Schedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(423, 195);
+            this.ClientSize = new System.Drawing.Size(423, 180);
             this.Controls.Add(this.contactMeControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form1";
+            this.Name = "Schedule";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Schedule a disussion with us";
             this.ResumeLayout(false);
 

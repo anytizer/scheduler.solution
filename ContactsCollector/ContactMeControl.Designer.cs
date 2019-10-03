@@ -192,7 +192,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.linkLabel1);
             this.Name = "ContactMeControl";
-            this.Size = new System.Drawing.Size(414, 182);
+            this.Size = new System.Drawing.Size(414, 231);
             this.Load += new System.EventHandler(this.ContactMeControl_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

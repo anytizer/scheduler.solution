@@ -48,5 +48,18 @@ namespace ContactsCollector
             {
             }
         }
+
+        // @todo base64 encode values
+        // SELECT TO_BASE64("/appointments/appointments/add");
+        private string _bookAppointment = "L2FwcG9pbnRtZW50cy9hcHBvaW50bWVudHMvYWRk";
+        public string BOOKAPPOINTMENT {
+            get
+            {
+                return encoder.decode(_bookAppointment);
+            }
+
+            set { }
+        }
+
     }
 }

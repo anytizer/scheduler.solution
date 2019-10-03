@@ -61,7 +61,6 @@
       <DependentUpon>ContactMeControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Encoder.cs" />
-    <Compile Include="Endpoints.cs" />
     <Compile Include="Schedule.cs">
       <SubType>Form</SubType>
     </Compile>
