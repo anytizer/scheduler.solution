@@ -9,6 +9,7 @@ namespace ContactsCollector
     class Endpoints
     {
         // @todo base64 encode values
-        public string bookAppointment = "/appointments/appointments/add";
+        // SELECT TO_BASE64("/appointments/appointments/add");
+        public string bookAppointment = "L2FwcG9pbnRtZW50cy9hcHBvaW50bWVudHMvYWRk";
     }
 }

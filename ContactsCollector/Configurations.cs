@@ -36,8 +36,8 @@ namespace ContactsCollector
             }
         }
 
-        // SELECT TO_BASE64("http://api.example.com/");
-        private string _apiServer = "aHR0cDovL2FwaS5leGFtcGxlLmNvbS8=";
+        // // SELECT TO_BASE64("http://localhost:99/project/inventory/api.php/src");
+        private string _apiServer = "aHR0cDovL2xvY2FsaG9zdDo5OS9wcm9qZWN0L2ludmVudG9yeS9hcGkucGhwL3NyYw==";
         public string APISERVER
         {
             get

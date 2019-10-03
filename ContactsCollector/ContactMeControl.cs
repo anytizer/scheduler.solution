@@ -39,8 +39,10 @@ namespace ContactsCollector
             // https://stackoverflow.com/questions/6312970/restsharp-json-parameter-posting
 
             // send contact info to the API
-            RestClient client = new RestClient("http://localhost:99/project/inventory/api.php/src"); //  config.APISERVER);
-            RestRequest request = new RestRequest(endpoints.bookAppointment, Method.POST);
+            
+            string booking_endpoint_resource = encoder.decode(endpoints.bookAppointment);
+            RestClient client = new RestClient(config.APISERVER);
+            RestRequest request = new RestRequest(booking_endpoint_resource, Method.POST);
             //request.RequestFormat = DataFormat.Json;
             request.AddParameter("software_name", encoder.encode(textBox1.Text));
             request.AddParameter("appointment_on", encoder.encode(dateTimePicker1.Value.ToString()));
