@@ -5,5 +5,5 @@ C# based appointment booking client software
 
 
 ## Installation
-* Edit your API Gateway, and endpoint URLs.
-* Create an endpoint to handle saving of the request.
+* In [Configurations](ContactsCollector/Configurations.cs), Edit your API Gateway, and endpoint URLs.
+* Create an endpoint/API Server to save of the POSTed request.
