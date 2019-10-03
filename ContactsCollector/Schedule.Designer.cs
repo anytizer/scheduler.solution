@@ -1,6 +1,6 @@
 namespace ContactsCollector
 {
-    partial class Form1
+    partial class Schedule
     {
         /// <summary>
         /// Required designer variable.

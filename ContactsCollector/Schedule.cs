@@ -13,9 +13,9 @@ using System.Windows.Forms;
 
 namespace ContactsCollector
 {
-    public partial class Form1 : Form
+    public partial class Schedule : Form
     {
-        public Form1()
+        public Schedule()
         {
             InitializeComponent();
         }

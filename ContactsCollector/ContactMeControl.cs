@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using RestSharp;
+using Newtonsoft.Json;
 
 namespace ContactsCollector
 {
@@ -27,7 +28,7 @@ namespace ContactsCollector
 
         private void ContactMeControl_Load(object sender, EventArgs e)
         {
-
+            dateTimePicker1.MinDate = DateTime.Now;
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -41,7 +42,8 @@ namespace ContactsCollector
             // send contact info to the API
             
             string booking_endpoint_resource = encoder.decode(endpoints.bookAppointment);
-            RestClient client = new RestClient(config.APISERVER);
+
+            RestClient client = new RestClient(config.APIGATEWAY);
             RestRequest request = new RestRequest(booking_endpoint_resource, Method.POST);
             //request.RequestFormat = DataFormat.Json;
             request.AddParameter("software_name", encoder.encode(textBox1.Text));
@@ -50,10 +52,20 @@ namespace ContactsCollector
             request.AddParameter("prospect_email", encoder.encode(textBox3.Text));
             request.AddHeader("Accept", "application/json"); // important
             request.AddHeader("X-Protection-Token", "");
-            IRestResponse response = client.Execute(request);
-            //RestResponse<SuccessResponse> response2 = client.Execute<SuccessResponse>(request);
 
-            MessageBox.Show("Thanks...\r\n" + response.Content);
+            IRestResponse response = client.Execute(request);
+
+            // https://www.newtonsoft.com/json/help/html/DeserializeObject.htm
+            SuccessResponse success = JsonConvert.DeserializeObject<SuccessResponse>(response.Content);
+            if(success.success == true)
+            {
+                button1.Enabled = false;
+                MessageBox.Show("Thanks!\r\nTo book another appointment, please restart the software.");
+            }
+            else
+            {
+                MessageBox.Show("We could not schedule.");
+            }
         }
 
         private void LinkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
