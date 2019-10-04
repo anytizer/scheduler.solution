@@ -1,14 +1,11 @@
-using Libraries;
+using libraries;
 using Newtonsoft.Json;
 using RestSharp;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
 
-// This is the code for your desktop app.
-// Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
-
-namespace ContactsViewer
+namespace viewer
 {
     public partial class BrowseContacts : Form
     {
@@ -44,21 +41,25 @@ namespace ContactsViewer
 
             IRestResponse response = client.Execute(request);
 
-            Appointment[] appointments = JsonConvert.DeserializeObject<Appointment[]>(response.Content);
-            foreach (Appointment a in appointments)
+            if(response.Content!="null" && response.Content!=null)
             {
-                a.software_name = encoder.decode(a.software_name);
-                a.appointment_on = encoder.decode(a.appointment_on);
-                a.prospect_full_name = encoder.decode(a.prospect_full_name);
-                a.prospect_email = encoder.decode(a.prospect_email);
+                Appointment[] appointments = JsonConvert.DeserializeObject<Appointment[]>(response.Content);
+                foreach (Appointment a in appointments)
+                {
+                    a.software_name = encoder.decode(a.software_name);
+                    a.appointment_on = encoder.decode(a.appointment_on);
+                    a.prospect_full_name = encoder.decode(a.prospect_full_name);
+                    a.prospect_email = encoder.decode(a.prospect_email);
+                }
+                dataGridView1.DataSource = appointments;
+                dataGridView1.Columns[0].Width = 240;
+                dataGridView1.Columns[1].Width = 160;
+                dataGridView1.Columns[2].Width = 160;
+                dataGridView1.Columns[3].Width = 160;
+                dataGridView1.Columns[4].Width = 160;
+                dataGridView1.Columns[5].Width = 160;
             }
-            dataGridView1.DataSource = appointments;
-            dataGridView1.Columns[0].Width = 240;
-            dataGridView1.Columns[1].Width = 160;
-            dataGridView1.Columns[2].Width = 160;
-            dataGridView1.Columns[3].Width = 160;
-            dataGridView1.Columns[4].Width = 160;
-            dataGridView1.Columns[5].Width = 160;
+            
         }
 
         private void stylize()

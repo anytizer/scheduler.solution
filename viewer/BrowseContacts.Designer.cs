@@ -1,4 +1,4 @@
-namespace ContactsViewer
+namespace viewer
 {
     partial class BrowseContacts
     {

@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using RestSharp;
 using Newtonsoft.Json;
-using Libraries;
-using EncoderDecoder = Libraries.EncoderDecoder;
+using libraries;
+using EncoderDecoder = libraries.EncoderDecoder;
 
-namespace ContactsCollector
+namespace scheduler
 {
     public partial class ContactMeControl : UserControl
     {
@@ -66,6 +66,7 @@ namespace ContactsCollector
             else
             {
                 MessageBox.Show("We could not schedule.");
+                //MessageBox.Show(success.message);
             }
         }
 

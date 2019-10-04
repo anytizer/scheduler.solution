@@ -1,4 +1,4 @@
-﻿namespace ContactsCollector
+﻿namespace scheduler
 {
     partial class ContactMeControl
     {
@@ -123,7 +123,6 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(192, 20);
             this.textBox3.TabIndex = 18;
-            this.textBox3.Text = "test@example.com";
             // 
             // textBox2
             // 
@@ -131,7 +130,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(192, 20);
             this.textBox2.TabIndex = 17;
-            this.textBox2.Text = "Full Name";
             // 
             // textBox1
             // 
@@ -139,7 +137,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(192, 20);
             this.textBox1.TabIndex = 16;
-            this.textBox1.Text = "Scheduler";
+            this.textBox1.Text = "Scheduler Or, ...";
             // 
             // linkLabel1
             // 

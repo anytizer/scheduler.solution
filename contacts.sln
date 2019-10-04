@@ -3,14 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29230.47
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactsCollector", "ContactsCollector\ContactsCollector.csproj", "{46033FFF-6F78-4B16-9020-CB547359E83E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactsViewer", "ContactsViewer\ContactsViewer.csproj", "{A1EB5309-04A3-4CE5-A953-38B473358170}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "scheduler", "scheduler\scheduler.csproj", "{46033FFF-6F78-4B16-9020-CB547359E83E}"
 	ProjectSection(ProjectDependencies) = postProject
 		{380A5B9B-8A2E-46FA-A6A8-73DFC1DC23B5} = {380A5B9B-8A2E-46FA-A6A8-73DFC1DC23B5}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Libraries", "Libraries\Libraries.csproj", "{380A5B9B-8A2E-46FA-A6A8-73DFC1DC23B5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "viewer", "viewer\viewer.csproj", "{A1EB5309-04A3-4CE5-A953-38B473358170}"
+	ProjectSection(ProjectDependencies) = postProject
+		{380A5B9B-8A2E-46FA-A6A8-73DFC1DC23B5} = {380A5B9B-8A2E-46FA-A6A8-73DFC1DC23B5}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "libraries", "libraries\libraries.csproj", "{380A5B9B-8A2E-46FA-A6A8-73DFC1DC23B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

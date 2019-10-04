@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ContactsViewer
+namespace scheduler
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace ContactsViewer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BrowseContacts());
+            Application.Run(new Schedule());
         }
     }
 }

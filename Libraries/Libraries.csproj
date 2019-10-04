@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{380A5B9B-8A2E-46FA-A6A8-73DFC1DC23B5}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Libraries</RootNamespace>
-    <AssemblyName>Libraries</AssemblyName>
+    <RootNamespace>libraries</RootNamespace>
+    <AssemblyName>libraries</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

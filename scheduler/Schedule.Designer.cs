@@ -1,4 +1,4 @@
-namespace ContactsCollector
+namespace scheduler
 {
     partial class Schedule
     {
@@ -28,7 +28,7 @@ namespace ContactsCollector
         /// </summary>
         private void InitializeComponent()
         {
-            this.contactMeControl1 = new ContactsCollector.ContactMeControl();
+            this.contactMeControl1 = new scheduler.ContactMeControl();
             this.SuspendLayout();
             // 
             // contactMeControl1
