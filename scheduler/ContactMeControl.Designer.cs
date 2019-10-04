@@ -178,9 +178,9 @@
             this.label8.ForeColor = System.Drawing.Color.Red;
             this.label8.Location = new System.Drawing.Point(10, 185);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(338, 13);
+            this.label8.Size = new System.Drawing.Size(368, 13);
             this.label8.TabIndex = 29;
-            this.label8.Text = "Genuine software is only distributed at: http://download.example.com/";
+            this.label8.Text = "Genuine software is only distributed at: https://downloads.urgentslicing.com/";
             // 
             // ContactMeControl
             // 
