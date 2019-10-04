@@ -17,18 +17,6 @@ namespace ContactsViewer
             InitializeComponent();
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            // Click on the link below to continue learning how to build a desktop app using WinForms!
-            System.Diagnostics.Process.Start("http://aka.ms/dotnet-get-started-desktop");
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Thanks!");
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             stylize();
@@ -47,10 +35,10 @@ namespace ContactsViewer
             Configurations config = new Configurations();
             EncoderDecoder encoder = new EncoderDecoder();
 
-            string booking_endpoint_resource = config.LISTAPPOINTMENTS;
+            string bookinglists_endpoint = config.LISTAPPOINTMENTS;
 
             RestClient client = new RestClient(config.APIGATEWAY);
-            RestRequest request = new RestRequest(booking_endpoint_resource, Method.POST);
+            RestRequest request = new RestRequest(bookinglists_endpoint, Method.POST);
             request.AddHeader("Accept", "application/json"); // important
             request.AddHeader("X-Protection-Token", "");
 
@@ -86,7 +74,7 @@ namespace ContactsViewer
             dataGridView1.BackgroundColor = Color.Honeydew;
             dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.Yellow;
             dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Tahoma", 9F, FontStyle.Bold);
-            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.Green;
+            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
             dataGridView1.ColumnHeadersDefaultCellStyle.WrapMode = DataGridViewTriState.False;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.DefaultCellStyle.SelectionBackColor = Color.Salmon;
@@ -99,6 +87,11 @@ namespace ContactsViewer
             dataGridView1.RowTemplate.Height = 16;
             dataGridView1.RowTemplate.Resizable = DataGridViewTriState.False;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        }
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

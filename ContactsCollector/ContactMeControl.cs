@@ -42,7 +42,7 @@ namespace ContactsCollector
 
             EncoderDecoder encoder = new EncoderDecoder();
             
-            string booking_endpoint_resource = config.BOOKAPPOINTMENT;
+            string booking_endpoint_resource = config.ENDPOINT_BOOKAPPOINTMENT;
 
             RestClient client = new RestClient(config.APIGATEWAY);
             RestRequest request = new RestRequest(booking_endpoint_resource, Method.POST);
