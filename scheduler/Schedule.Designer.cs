@@ -51,7 +51,7 @@ namespace scheduler
             this.MinimizeBox = false;
             this.Name = "Schedule";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Schedule a disussion with us";
+            this.Text = "Schedule a Disussion";
             this.ResumeLayout(false);
 
         }
