@@ -36,6 +36,9 @@ namespace scheduler
 
         private void Button1_Click(object sender, EventArgs e)
         {
+            button1.Text = "Please wait...";
+            button1.Enabled = false;
+
             // https://stackoverflow.com/questions/6312970/restsharp-json-parameter-posting
 
             // send contact info to the API
@@ -60,11 +63,13 @@ namespace scheduler
             SuccessResponse success = JsonConvert.DeserializeObject<SuccessResponse>(response.Content);
             if(success.success == true)
             {
-                button1.Enabled = false;
+                button1.Text = "Done!";
                 MessageBox.Show("Thanks!\r\nTo book another appointment, please restart the software.");
             }
             else
             {
+                button1.Text = "Contact me";
+                button1.Enabled = true;
                 MessageBox.Show("We could not schedule.");
                 //MessageBox.Show(success.message);
             }
