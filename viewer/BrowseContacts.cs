@@ -41,7 +41,7 @@ namespace viewer
 
             IRestResponse response = client.Execute(request);
 
-            if(response.Content!="null" && response.Content!=null)
+            if(response.Content!="null" && response.Content != "\"null\"" && response.Content!= "\"[]\"" && response.Content!=null)
             {
                 Appointment[] appointments = JsonConvert.DeserializeObject<Appointment[]>(response.Content);
                 foreach (Appointment a in appointments)
@@ -51,6 +51,7 @@ namespace viewer
                     a.prospect_full_name = encoder.decode(a.prospect_full_name);
                     a.prospect_email = encoder.decode(a.prospect_email);
                 }
+
                 dataGridView1.DataSource = appointments;
                 dataGridView1.Columns[0].Width = 240;
                 dataGridView1.Columns[1].Width = 160;
