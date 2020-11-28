@@ -55,6 +55,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.Maroon;
             this.label6.Location = new System.Drawing.Point(297, 123);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(118, 13);
@@ -165,6 +166,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.Maroon;
             this.label7.Location = new System.Drawing.Point(297, 94);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(85, 13);

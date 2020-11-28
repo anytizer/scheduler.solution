@@ -1,22 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using RestSharp;
+﻿using Libraries;
 using Newtonsoft.Json;
-using libraries;
+using RestSharp;
+using System;
+using System.Windows.Forms;
 using EncoderDecoder = libraries.EncoderDecoder;
 
 namespace scheduler
 {
     public partial class ContactMeControl : UserControl
     {
-        private Configurations config = new Configurations();
+        private readonly Configurations config = new Configurations();
 
         public ContactMeControl()
         {
