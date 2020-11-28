@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace libraries
+﻿namespace libraries
 {
     // https://github.com/MikeWasson/BookService/
     // https://docs.microsoft.com/en-us/aspnet/web-api/overview/data/using-web-api-with-entity-framework/part-5
@@ -17,5 +11,15 @@ namespace libraries
         public string prospect_full_name { get; set; }
         public string prospect_email { get; set; }
         public string added_on { get; set; }
+
+        public Appointment()
+        {
+            this.appointment_id = "";
+            this.software_name = "";
+            this.appointment_on = "";
+            this.prospect_full_name = "";
+            this.prospect_email = "";
+            this.added_on = "";
+        }
     }
 }

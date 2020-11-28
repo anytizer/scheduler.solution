@@ -1,4 +1,5 @@
 using libraries;
+using Libraries;
 using Newtonsoft.Json;
 using RestSharp;
 using System;
@@ -18,7 +19,6 @@ namespace viewer
         {
             stylize();
             browse();
-
         }
 
         private void RefreshToolStripMenuItem_Click(object sender, EventArgs e)
@@ -60,7 +60,6 @@ namespace viewer
                 dataGridView1.Columns[4].Width = 160;
                 dataGridView1.Columns[5].Width = 160;
             }
-            
         }
 
         private void stylize()
